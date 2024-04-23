@@ -16,34 +16,41 @@
       <input
         type="button"
         value="1"
+        (click)="buttonClickedValue = 1"
         class="focus:bg-LightGrey focus:text-[rgb(250,250,250)] hover:bg-Orange hover:text-[rgb(250,250,250)] transition-colors duration-300"
       />
       <input
         type="button"
         value="2"
+        (click)="buttonClickedValue = 2"
         class="focus:bg-LightGrey focus:text-[rgb(250,250,250)] hover:bg-Orange hover:text-[rgb(250,250,250)] transition-colors duration-300"
       />
       <input
         type="button"
         value="3"
+        (click)="buttonClickedValue = 3"
         class="focus:bg-LightGrey focus:text-[rgb(250,250,250)] hover:bg-Orange hover:text-[rgb(250,250,250)] transition-colors duration-300"
       />
       <input
         type="button"
         value="4"
+        (click)="buttonClickedValue = 4"
         class="focus:bg-LightGrey focus:text-[rgb(250,250,250)] hover:bg-Orange hover:text-[rgb(250,250,250)] transition-colors duration-300"
       />
       <input
         type="button"
         value="5"
+        (click)="buttonClickedValue = 5"
         class="focus:bg-LightGrey focus:text-[rgb(250,250,250)] hover:bg-Orange hover:text-[rgb(250,250,250)] transition-colors duration-300"
       />
     </div>
-    <button
-      type="submit"
-      class="bg-Orange p-3 rounded-full w-full text-[rgb(250,250,250)] hover:bg-[rgb(250,250,250)] hover:text-Orange transition-colors duration-300 font-semibold text-mg tracking-widest py-3"
-    >
-      SUBMIT
-    </button>
+    <a [routerLink]="['/thankyou']">
+      <input
+        type="submit"
+        [disabled]="!buttonClickedValue"
+        (click)="sendNote()"
+        class="bg-Orange p-3 rounded-full w-full text-[rgb(250,250,250)] hover:bg-[rgb(250,250,250)] hover:text-Orange transition-colors duration-300 font-semibold text-mg tracking-widest py-3"
+      />
+    </a>
   </form>
 </div>
